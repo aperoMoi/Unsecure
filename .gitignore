@@ -1,3 +1,4 @@
+# Symfony - gitignore config
 vendor/
 composer.lock
 phpunit.xml
@@ -6,3 +7,7 @@ composer.phar
 package.tar
 /packages.json
 /.phpunit
+
+# Add on
+## JetBrains IDE Folder
+.idea/
