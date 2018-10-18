@@ -15,3 +15,5 @@ app/config/parameters.yml
 app/logs/dev.log
 ## JetBrains IDE Folder
 .idea/
+## logs
+app/logs/
