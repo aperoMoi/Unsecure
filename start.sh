@@ -3,7 +3,7 @@ DATE=`date '+%Y-%m-%d %H:%M:%S'`
 
 function fc_log {
 	echo "$DATE -> $1"
-	echo "$DATE -> $1" >> error_script_start.log
+	echo "$DATE -> $1" >> ./app/logs/error_script_start.log
 }
 
 function check_parameter {
