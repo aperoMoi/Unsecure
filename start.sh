@@ -25,14 +25,20 @@ function install {
 	composer install
 	fc_log "SCRIPT STATUS : Launch 'docker-compose build'"
 	docker-compose build
-	php app/console cache:clear
 	start
 }
 
 function start {
 	fc_log "SCRIPT STATUS : Launch server"
 	docker-compose up -d
+	fc_log "SCRIPT STATUS : Clearing cache"
+	php app/console cache:clear 
+	fc_log "SCRIPT STATUS : Clearing cache : env prod"
+	php app/console cache:clear --env prod
 	fc_log "SCRIPT STATUS : Success"
+
+	echo "Well done ! Now, let's go on the website !"
+	echo "NOTICE : Wait few seconds if you are an error at the beginning..."
 }
 
 fc_log "SCRIPT START"
