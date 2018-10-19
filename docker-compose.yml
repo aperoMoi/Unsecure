@@ -1,0 +1,21 @@
+version: '3'
+services:
+  site:
+    build: build/site
+    ports :
+     - "80:80"
+    volumes:
+     - ./:/var/www/html/
+     - ${PWD}/build/apache2config/000-default.conf:/etc/apache2/sites-available/000-default.conf
+     - ${PWD}/build/apache2config/apache2.conf:/etc/apache2/apache2.conf
+    depends_on:
+     - mariadb
+
+  mariadb:
+    image: mysql:5.6
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: vse_khorosho
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
