@@ -9,5 +9,11 @@ package.tar
 /.phpunit
 
 # Add on
+## Folder and file Symfony
+app/cache/dev/
+app/config/parameters.yml
+app/logs/dev.log
 ## JetBrains IDE Folder
 .idea/
+## logs
+app/logs/
