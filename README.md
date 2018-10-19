@@ -21,10 +21,14 @@ For Mac/os :
 
 After cloning the repository, go in the directory and use this command in your terminal :
 
-`la commande `
+`./start.sh install `
+
+In case if this command don't run correctly you can check the log of the starting script at :
+ 
+`./app/logs/error_script_start.log`
 
 ## Contributing
 
-Read the [CONTRIBUTING.md](https://github.com/aperoMoi/Unsecure/blob/develop/CONTRIUBUTING.md)
+Read the [CONTRIBUTING.md](https://github.com/aperoMoi/Unsecure/blob/develop/CONTRIBUTING.md)
 
 Thanks you in advance :)
