@@ -6,7 +6,5 @@ env:
 before_script:
   - composer self-update
   - composer install
-
 script:
-  - ./start.sh install
   - phpunit
