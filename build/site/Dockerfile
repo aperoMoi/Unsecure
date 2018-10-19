@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends libmagickwand-d
 
 RUN pecl install imagick-3.4.3 && docker-php-ext-enable imagick
 
-RUN docker-php-ext-configure gmp
-RUN docker-php-ext-install gmp
+#RUN docker-php-ext-configure gmp
+#RUN docker-php-ext-install gmp
 
 # Workaround for write permission on write to MacOS X volumes
 # See https://github.com/boot2docker/boot2docker/pull/534
