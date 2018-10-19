@@ -1,0 +1,12 @@
+language: php
+php:
+  - '5.6'
+env:
+  - SYMFONY_VERSION="2.8.*" DB=mysql
+before_script:
+  - composer self-update
+  - composer install
+
+script:
+  - ./start.sh install
+  - phpunit
