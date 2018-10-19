@@ -1,4 +1,5 @@
 #!/bin/bash
+# test
 DATE=`date '+%Y-%m-%d %H:%M:%S'`
 
 function fc_log {
